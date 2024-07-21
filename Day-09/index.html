@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-MANIPULATION</title>
+    <style>
+        .box{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+        }
+        div{
+            margin: 8px;
+            height: 100px;
+            width: 100px;
+            border: 5px solid black;
+        }
+        img{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Activity - 1  -->
+     <button id="btn1">Click Me</button>
+     <br><br><br>
+     <div class="box">DIV1</div>
+     <ul></ul>
+
+
+     <img src="https://avatars.githubusercontent.com/u/172787242?v=4" alt="">
+     <div id="mydiv">DIV2</div>
+     <button id="change">Click me</button>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde molestiae, facilis praesentium distinctio expedita magnam! Ut voluptatem, tempore numquam praesentium,</p>
+
+</body>
+
+<script>
+    // Activity - 1 
+    let button1 = document.getElementById("btn1")
+    button1.textContent = "Press Me"
+
+    let myBox = document.querySelector(".box")
+    myBox.style.background = "green"
+
+    // Activity - 2
+
+    let createDiv = document.createElement("div")
+    createDiv.textContent = "Created by JS"
+    document.body.appendChild(createDiv)
+
+    let ul = document.querySelector("ul")
+    let newLi = document.createElement("li")
+    newLi.textContent = "python"
+    ul.appendChild(newLi)
+
+    // Activity - 3
+    document.body.removeChild(ul) // remove ul
+    document.body.lastChild.remove()
+
+    // Activity - 4
+    let img = document.querySelector("img")
+    img.setAttribute("src","https://avatars.githubusercontent.com/u/11613311?v=4")
+
+    let mydiv = document.getElementById("mydiv")
+    mydiv.classList.add("box")
+    myBox.classList.remove("box")
+
+    // Activity - 5
+
+    let myP = document.querySelector("p")
+    let changeButton = document.querySelector("#change")
+    changeButton.onclick = function(){
+        myP.textContent = "sreephaneesh is good boy"
+    }
+
+    mydiv.addEventListener("mouseover",()=>{
+        mydiv.style.border = "5px solid blue"
+    })
+
+</script>
+</html>
