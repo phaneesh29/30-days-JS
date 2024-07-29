@@ -6,7 +6,7 @@ for (let i = 1; i <= 30; i++) {
         <div class="inner-card">
             <h1>Day - ${prependZero(i)}</h1>
         </div>
-        <button class="btn"><a href="./Day-${prependZero(i)}">Click Here Day-${prependZero(i)}</a></button>
+        <button class="btn"><a href="./Day-${prependZero(i)}/${prependZero(i)}.html">Click Here Day-${prependZero(i)}</a></button>
     </div>
     `
 }
